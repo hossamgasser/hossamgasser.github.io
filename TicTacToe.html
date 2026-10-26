@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TicTacToe — Hossam Khalifa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="promo" href="opportunities.html">
+      Hiring experts in STEM, law, finance and more, with pay up to $100+/hr in some fields. Learn more →
+    </a>
+    <header>
+      <nav>
+        <a class="brand" href="index.html">Hossam Khalifa</a>
+        <a class="l" href="index.html">About</a>
+        <a class="l on" href="projects.html">Projects</a>
+        <a class="l" href="reports.html">Reports</a>
+        <a class="l" href="opportunities.html">Opportunities</a>
+      </nav>
+    </header>
+
+    <!-- Project header -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <a class="back" href="projects.html">← All projects</a>
+          <h1>TicTacToe Game</h1>
+          <p class="lead">Game Developer · 2023</p>
+          <span class="tag">Python</span><span class="tag b">Pygame</span
+          ><span class="tag y">Multiplayer</span>
+        </div>
+          <img class="photo" src="images/TicTacToe_logo.png" alt="TicTacToe logo" 
+          style="width: 100%; max-width: 220px; height: auto; object-fit: contain"/>
+      </div>
+    </div>
+    <!-- Overview -->
+    <section>
+      <div class="wrap two">
+        <div>
+          <h2>Overview</h2>
+          <p> A multiplayer version of the classic Tic Tac Toe game, where two players take turns placing their
+              marks on a 3×3 grid until one of them completes a line or the board fills up. The project focused
+              on handling game state cleanly and checking for a winner after every move. 
+          </p>
+        </div>
+        <div>                  
+          <h2 style="margin-top: 32px">What I did</h2>
+          <p>  I built the whole game on my own. Each player's moves are stored in arrays, and after every turn
+              the game compares them against the possible winning combinations to decide whether there is a
+              winner, a draw, or whether play continues. I also handled turn switching and blocked moves on
+              squares that were already taken and added a new game option after a game is decided.
+           </p>
+        </div>
+      </div>
+    </section>
+    <!-- Demo video and outcome -->
+    <section>
+      <div class="wrap">
+        <h2>Demo</h2>
+        <figure style="max-width: 720px; margin: 0 auto">
+          <video
+            controls
+            preload="metadata"
+            style="display: block; width: 100%; border-radius: 20px; clip-path: inset(0 round 20px)"
+          >
+            <source src="videos/tic-tac-toe.mp4" type="video/mp4" />
+          </video>
+        </figure>
+      </div>
+    </section>
+    <footer>
+      <div class="wrap">
+        © 2026 Hossam Khalifa · <a href="mailto:hossgasser@gmail.com">hossgasser@gmail.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

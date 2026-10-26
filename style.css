@@ -1,0 +1,566 @@
+/* ---------- Colors: change these to restyle the whole site ---------- */
+:root {
+  --ink: #1b1530;
+  --muted: #6a6283;
+  --bg: #fff;
+  --soft: #f5f2fb;
+  --primary: #6d4fc2;
+  --accent: #8b6fd6;
+  --light: #cbbdf0;
+  --tint: #e8e1f8;
+  --r: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Base ---------- */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    17px/1.65 system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  padding-top: env(safe-area-inset-top, 0px);
+}
+a {
+  color: var(--primary);
+}
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e5def3;
+  z-index: 5;
+}
+nav {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 22px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+nav .brand {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-right: auto;
+  color: var(--ink);
+  text-decoration: none;
+}
+nav a.l {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+nav a.l:hover {
+  background: var(--soft);
+  color: var(--ink);
+}
+nav a.l.on {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ---------- Intro / page header ---------- */
+.hero {
+  background: var(--soft);
+  padding: 44px 0;
+}
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 6px;
+}
+
+.lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+/* ---------- Image placeholders (swap for <img>) ---------- */
+.ph {
+  background: linear-gradient(135deg, #ece6fa, #ddd3f4);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6a559e;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px;
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+.ph.tall {
+  aspect-ratio: 4/5;
+  max-width: 300px;
+  margin-left: auto;
+}
+.ph.wide {
+  aspect-ratio: 16/9;
+}
+.ph.warm {
+  background: linear-gradient(135deg, #e6def7, #d3c6f0);
+  color: #5b4a8f;
+}
+img {
+  max-width: 100%;
+  border-radius: var(--r);
+  display: block;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 8px 8px 0 0;
+}
+.btn.alt {
+  background: var(--accent);
+}
+
+/* ---------- Sections and headings ---------- */
+section {
+  padding: 48px 0;
+}
+h2 {
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 9px;
+  margin-top: 6px;
+}
+
+/* ---------- Cards and grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: #fff;
+  border-radius: var(--r);
+  box-shadow: 0 2px 14px rgba(27, 21, 48, 0.08);
+  border: 1px solid #ebe5f6;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.15s;
+}
+a.card:hover {
+  transform: translateY(-4px);
+}
+.card .ph,
+.card img {
+  border-radius: 0;
+}
+.card .body {
+  padding: 16px 20px 20px;
+}
+.card h3 {
+  margin: 0 0 4px;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Tags ---------- */
+.tag {
+  display: inline-block;
+  background: var(--tint);
+  color: #4a3a82;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 99px;
+  padding: 2px 12px;
+  margin: 0 6px 6px 0;
+}
+.tag.b {
+  background: #e0dbf7;
+  color: #3b3282;
+}
+.tag.y {
+  background: #efe4f7;
+  color: #5a2f7a;
+}
+
+/* ---------- Resume entries ---------- */
+.job {
+  border-left: 3px solid var(--accent);
+  padding: 2px 0 2px 20px;
+  margin: 0 0 22px;
+}
+.job small {
+  color: var(--muted);
+  font-weight: 600;
+}
+.job h3 {
+  margin: 2px 0;
+}
+.band {
+  background: var(--soft);
+}
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.back {
+  display: inline-block;
+  margin: 24px 0 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+.vid {
+  aspect-ratio: 16/9;
+  width: 100%;
+  border: 0;
+  border-radius: var(--r);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--ink);
+  color: #fff;
+  text-align: center;
+  padding: 28px 0;
+  margin-top: 40px;
+}
+footer a {
+  color: var(--light);
+}
+
+/* ---------- Mobile layout ---------- */
+@media (max-width: 760px) {
+  .hero .wrap,
+  .two {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 36px 0;
+  }
+}
+
+/* ---------- Reports list ---------- */
+.reps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+.rep {
+  display: grid;
+  grid-template-columns: 84px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ebe5f6;
+  border-radius: var(--r);
+  padding: 16px 20px;
+  box-shadow: 0 2px 14px rgba(27, 21, 48, 0.06);
+}
+.rep .ph {
+  aspect-ratio: 3/4;
+  width: 84px;
+  padding: 4px;
+  font-size: 0.75rem;
+  border-radius: 8px;
+}
+.rep h3 {
+  margin: 0 0 2px;
+}
+.rep p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.rep .btn {
+  margin: 0;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .rep {
+    grid-template-columns: 64px 1fr;
+  }
+  .rep .ph {
+    width: 64px;
+  }
+  .rep .btn {
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+.from {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ---------- Projects timeline ---------- */
+.timeline {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0 0 0 56px;
+  position: relative;
+}
+/* The vertical line fades from strong to light: newer work down to older work */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, var(--primary), var(--light));
+}
+.tl-end {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.tl-start {
+  margin-bottom: 24px;
+}
+.tl-finish {
+  margin-top: 8px;
+}
+.tl-end::before {
+  content: "";
+  position: absolute;
+  left: -51px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.tl-start::before {
+  background: var(--primary);
+}
+.tl-finish::before {
+  background: #fff;
+  border: 4px solid var(--light);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -51px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 4px solid var(--shade);
+}
+.tl-year {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--shade);
+}
+.tl-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+}
+.tl-card .body {
+  padding: 20px 24px;
+}
+@media (max-width: 700px) {
+  .timeline {
+    padding-left: 40px;
+  }
+  .timeline::before {
+    left: 5px;
+  }
+  .tl-end::before,
+  .tl-item::before {
+    left: -41px;
+  }
+  .tl-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small label next to a job title */
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 10px;
+  border-radius: 99px;
+  background: var(--tint);
+  color: #4a3a82;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+/* Languages list */
+.lang-title {
+  margin: 28px 0 8px;
+}
+.langs {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+.langs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5def3;
+}
+.langs span {
+  color: var(--muted);
+}
+.tl-card {
+  grid-template-columns: 160px 1fr; /* was 240px */
+}
+.tl-card .ph,
+.tl-card img {
+  aspect-ratio: 1 / 1; /* square; use 4 / 3 for a wider crop */
+  height: auto;
+  object-fit: fill
+}
+.demos {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.demos figure {
+  flex: 1 1 0;
+  min-width: 0; /* lets the videos shrink instead of wrapping */
+  max-width: 320px; /* remove this line for landscape videos */
+  margin: 0;
+}
+.demos video,
+.demos iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 20px;
+  clip-path: inset(0 round 20px); /* makes the rounding apply to the video itself */
+  background: var(--ink);
+  box-shadow: 0 4px 18px rgba(27, 21, 48, 0.15);
+}
+.demos figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Stack only on small phones */
+@media (max-width: 500px) {
+  .demos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.grid img {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  object-position: top;
+}
+img.mockup {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0; /* the phone already has its own shape */
+  margin: 0 auto;
+}
+.demos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.demos figure {
+  margin: 0;
+}
+.demos video,
+.demos iframe {
+  display: block;
+  width: 100%;
+  border-radius: var(--r);
+  background: var(--ink);
+}
+.demos figcaption {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--muted);
+}
+.promo {
+  display: block;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.promo:hover {
+  background: var(--accent);
+}

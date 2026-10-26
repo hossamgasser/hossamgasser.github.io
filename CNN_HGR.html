@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hand Gesture Recognition using CNNs — Hossam Khalifa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="promo" href="opportunities.html">
+      Hiring experts in STEM, law, finance and more, with pay up to $100+/hr in some fields. Learn more →
+    </a>
+    <header>
+      <nav>
+        <a class="brand" href="index.html">Hossam Khalifa</a>
+        <a class="l" href="index.html">About</a>
+        <a class="l on" href="projects.html">Projects</a>
+        <a class="l" href="reports.html">Reports</a>
+        <a class="l" href="opportunities.html">Opportunities</a>
+      </nav>
+    </header>
+
+    <!-- Project header -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <a class="back" href="projects.html">← All projects</a>
+          <h1>Hand Gesture Recognition using CNNs</h1>
+          <p class="lead">Coder, Tester, Data Analyzer &amp; Researcher · 2025</p>
+          <span class="tag">Python</span><span class="tag b">sklearn</span
+          ><span class="tag y">TensorFlow</span><span class="tag">Jupyter</span>
+          <span class="tag b">Google Collab</span><span class="tag y">Torch 2.10.0</span>
+          <span class="tag">ResNet34</span>
+          <span class="tag b">VGG-16</span><span class="tag y">ShuffleNetV2</span>
+        </div>
+          <img
+          src="images/CNN_logo.png"
+          alt="CNN logo"
+          style="width: 100%; max-width: 220px; height: auto; object-fit: contain"
+          />
+      </div>
+    </div>
+    <!-- Overview -->
+    <section>
+      <div class="wrap two">
+        <div>
+          <h2>Overview</h2>
+          <p>
+            This project uses convolutional neural networks to recognize hand gestures from images. We trained
+              and compared three architectures (ShuffleNetV2, ResNet-34 and VGG-16-BN) on three datasets: HaGRID
+              (like and dislike gestures), ASLDigits (digits 0 to 9) and SignAlphaSet (the ASL alphabet). In
+              total, we trained 11 models, including two VGG-16-BN models that use transfer learning. Each model
+              was evaluated with classification reports, confusion matrices, loss curves and Grad-CAM
+              visualizations that show which parts of the image the model relied on. A live-camera notebook runs
+              the trained models on a webcam feed for real-time recognition.
+          </p>
+          <h2 style="margin-top: 32px">What I did</h2>
+          <p>
+              I worked on this as part of a team and contributed to most parts of the project. That included
+              building the data pipelines for each dataset (label mappings, augmentation and random background
+              replacement), training and evaluating the models, producing the evaluation plots and Grad-CAM
+              visualizations, and helping with the real-time webcam demo. We kept the train, validation and
+              test splits in saved files so every model was compared on the same data.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px">
+          <img
+            src="images/CNN_HGR_img0.png"
+            alt="CNN HGR ResNet34 like/dislike grad cam"
+            style="width: 100%; height: auto; display: block; border-radius: 14px"
+          />
+          <img
+            src="images/CNN_HGR_img1.png"
+            alt="CNN HGR ResNet34 sign alphabet grad cam"
+            style="width: 100%; height: auto; display: block; border-radius: 14px"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Image gallery -->
+    <section class="band">
+      <div class="wrap">
+        <h2>Gallery</h2>
+        <div class="grid">
+
+          <figure style="margin: 0">
+            <img class="mockup" src="images/CNN_HGR_img2.png" alt="ShuffleNetV2 Training Accuracy Curve on Like/dislike" />
+            <figcaption style="margin-top: 8px; text-align: center; color: var(--muted)">
+              ShuffleNetV2 Training Accuracy Curve on Like/dislike
+            </figcaption>
+          </figure>
+
+          <figure style="margin: 0">
+            <img class="mockup" src="images/CNN_HGR_img3.png" alt="ResNet34 Training Accuracy Curve on Like/dislike" />
+            <figcaption style="margin-top: 8px; text-align: center; color: var(--muted)">
+              ResNet34 Training Accuracy Curve on Like/dislike dataset
+            </figcaption>
+          </figure>
+
+          <figure style="margin: 0">
+
+            <img class="mockup" src="images/CNN_HGR_img4.png" alt="VGG16 Training Accuracy Curve on Like/dislike dataset" />
+            <figcaption style="margin-top: 8px; text-align: center; color: var(--muted)">
+              VGG16 Training Accuracy Curve on Like/dislike dataset
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="related-reports">
+      <div class="wrap">
+        <h2>Related reports</h2>
+        <div class="reps">
+          <div class="rep">
+            <img src="images/CNN_HGR_Report_Cover.png" alt="Cover of CNN Hand Gesture Recognition Report" />
+            <div>
+              <h3>Hand Gesture Recognition Using CNNs</h3>
+              <p>2025 · 30 pages</p>
+              <p>Proposal, methodology and results from comparing 11 CNN models for hand gesture recognition.</p>
+            </div>
+            <a class="btn" href="reports/CNN_HGR Report.pdf">Open PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="wrap">
+        © 2026 Hossam Khalifa · <a href="mailto:hossgasser@gmail.com">hossgasser@gmail.com</a>
+      </div>
+    </footer>
+  </body>
+</html>
